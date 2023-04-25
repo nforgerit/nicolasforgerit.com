@@ -1,0 +1,11 @@
+.page-content.certs .page-content {
+  display: grid;
+  grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
+  gap: 4rem;
+
+  @include media-query($on-mobile) {
+    grid-template-columns: calc(100% - 1rem);
+  }
+
+
+}

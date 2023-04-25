@@ -1,0 +1,77 @@
+baseURL = 'https://hba.sid.one/'
+title = "Awesome Hugo blog"
+
+# This is what goes in <html lang="">
+languageCode = 'en-us'
+
+theme = "hugo-blog-awesome"
+
+# This defines how dates are formatted
+defaultContentLanguage = "en-us"
+
+# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
+# To disable  Google Analytics, simply leave the field empty or remove the next line
+googleAnalytics = '' # G-MEASUREMENT_ID
+
+# Enable emojis globally
+enableEmoji = true
+
+# set markup.highlight.noClasses=false to enable code highlight
+[markup]
+[markup.highlight]
+noClasses = false
+[markup.goldmark.renderer]
+unsafe = true
+
+[menu]
+[[menu.main]]
+# The page reference (pageRef) is useful for menu highlighting
+# When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
+name = 'Home'
+pageRef = "/"
+url = '/'
+weight = 10
+[[menu.main]]
+name = 'Blog'
+pageRef = "blog"
+url = '/blog/'
+weight = 20
+[[menu.main]]
+name = 'Work'
+pageRef = "work"
+url = '/work/'
+weight = 30
+
+[params]
+defaultColor = "dark" # set default color mode: dark or light
+description = "Minimal Hugo blog theme with light and dark mode support" 
+mainSections = ['blog'] 
+sitename = "Awesome hugo blog" 
+
+[params.author]
+avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
+# Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
+# description = "A fast, minimalistic Software Engineer with light and dark mode support, running a personal site / blog"
+description = "A fast, minimalistic <s>Hugo theme</s> Software Engineer with light and dark mode support, <s>for</s> running a personal site <s>or</s> and blog"
+intro = "I rant therefore I am"
+name = "Nicolas Forgerit"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/nforgerit"
+
+[[params.socialIcons]]
+name = "mastodon"
+url = "https://hejfolks.social/@nfrgrt"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/nicolas-forgerit/"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "/index.xml"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:hello@nicolasforgerit.com"

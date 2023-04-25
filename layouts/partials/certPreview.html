@@ -1,0 +1,13 @@
+<article class="certificate-item">
+    <h4 class="certificate-item-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h4>
+    <a href="{{ .Permalink }}">
+        <img src="{{ .RelPermalink }}{{ .Params.image }}" alt="{{ .Title }}" />
+    </a>
+    {{/*  format date string to create an ISO 8601 string  */}}
+    {{ $ISO_date := "2006-01-02T15:04:05Z0700" }}
+    <time class="post-item-meta" datetime="{{ dateFormat $ISO_date .Date }}">
+        {{ .Date | time.Format ":date_medium" }}
+    </time>
+</article>

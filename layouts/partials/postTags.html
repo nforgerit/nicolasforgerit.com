@@ -1,0 +1,5 @@
+<article class="post-tags">
+{{- range .Params.tags }}
+    <a href="/tags/{{ . | anchorize }}">#{{ . | anchorize }}</a>
+{{- end }}
+</article>
