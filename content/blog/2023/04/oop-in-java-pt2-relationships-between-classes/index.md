@@ -9,6 +9,8 @@ tags:
 
 # Relationships between Classes
 
+In general: abstraction, encapsulation, inheritance, and polymorphism.
+
 ## Inheritance
 
 Inheritance ("is-a")
@@ -30,6 +32,10 @@ Dependence ("uses-a")
 
 Another often referred principle is the so called "has-a relationship"
 ("composition over inheritance").
+
+# Polymorphism
+
+.....todo write paragraph about polymorphism
 
 # Recap
 

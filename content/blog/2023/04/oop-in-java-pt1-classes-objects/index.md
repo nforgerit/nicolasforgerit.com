@@ -7,12 +7,29 @@ tags:
   - java
 ---
 
-![Objects in their natural habitat: A dark void](oop-1.png "Example objects stylized as random shapes in different colors")
+<!-- ![Objects in their natural habitat: A dark void](oop-1.svg#objs "Example objects stylized as random shapes in different colors") -->
+
+{{< svg "blog/2023/04/oop-in-java-pt1-classes-objects/oop-1.svg" "Objects vibing in a program, having a good time">}}
+
+<style>
+  svg#objs:hover > *  {
+    animation-play-state: running;
+  }
+</style>
+
+<!-- <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="BaNwLzy" data-preview="true" data-user="nforgerit" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/nforgerit/pen/BaNwLzy">
+  Untitled</a> by Nico (<a href="https://codepen.io/nforgerit">@nforgerit</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<iframe width="100%" height="500" src="https://replit.com/@nforgerit/this-ma-repl?embed=true"></iframe> -->
 
 Object-oriented Programming (OOP) is still one of the most dominant programming
 methodologies, altough this changed a lot compared to with two decades ago when
-it was seen as the silver bullet to creating software. Java bought heavily into
-OOP from early on in the 90s and managed to rejuvenate in the recent years.
+it was seen as the silver bullet to creating software; Java bought heavily into
+OOP from early on in the 90s but managed to rejuvenate in the recent years.
 
 # Classes and Objects
 
@@ -21,11 +38,20 @@ blueprint and can both be defined by the programmer as well as be taken from the
 [Java Standard Library](https://docs.oracle.com/en/java/javase/20/docs/api/index.html)
 or a third-party library.
 
+```java
+class MyClass {
+  // here goes the class definition with fields and methods
+}
+
+// myObject will be shaped like MyClass defined it
+MyClass myObject = new MyClass();
+```
+
 Instantiating an object after a given class `MyClass` is simply done by calling
 `new MyClass()` and assigning it to a reference variable which points to the
 data behind the newly created object in the computer's memory.
 
-![How object are defined by Classes](oop-2.png "Example objects instantiated by class definitions")
+![How object are defined by Classes](oop-2.png "Example objects instantiated through class definitions")
 
 While the instantiated objects serve as container for concrete data and related
 functionalities (methods), the class serves as an abstraction which lets the
@@ -43,10 +69,11 @@ unique to every instance.
 
 One of the core principles of OOP is _encapsulation_ which means that the data
 of an object is only accessible through specialized methods, so called _getters_
-and _setters_, combined called _accessors_. Even though those _getters_ and
-_setters_ don't do anything, it is still common to define them in order to be
-able to change the implementation "under the hood" without having to change the
-code that uses the object.
+and _setters_, collectively called _accessors_. Even though those _accessors_
+don't do anything special with the data they're accessing or storing in the
+object they're called on, it is still common to add them to class definitions in
+order to be able to, what's commonly stated, change the implementation "under
+the hood" without having to change the code that uses the object.
 
 ![Accessors in action: A User object with accessors for the fields firstName, lastName and birthdate but no setter for createdAt which gets set automatically upon object instantiation and cannot change by definition](oop-3.png "A User object with accessors for the fields firstName, lastName and birthdate but no setter for createdAt which gets set automatically upon object instantiation and cannot change by definition")
 
@@ -64,7 +91,7 @@ The problem with the approach of accessor methods is that it hints at a wrong
 approach for encapsulation. It is _not_ good if you encapsulate the fact that
 the object is doing a network operation unless you make that clear by giving its
 according class an appropriate name. You would also rather not add name
-correcting code into accessor methods if you rename your classes fields from
+correcting code into accessor methods if you rename your class's fields from
 `firstName` to `givenName` because once your code is aging, you will pile up a
 lot of those correcting code and everything will end up in a mess. You can do
 that _temporarily_ though in order to quickly change your code without having to
@@ -81,10 +108,6 @@ change the underlying database schema. Code rot is a real thing.
 > and every detail of the car's engine in order to drive it. In programming, it
 > helps the creator of a software to express the intent of the code design
 > making it easier to reuse by others and understand its behavior.
-
-# Polymorphism
-
-.....todo write paragraph about polymorphism
 
 # Recap
 

@@ -27,9 +27,9 @@ unsafe = true
 [[menu.main]]
 # The page reference (pageRef) is useful for menu highlighting
 # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
-name = 'Home'
-pageRef = "/"
-url = '/'
+name = 'About'
+pageRef = "about"
+url = '/about/'
 weight = 10
 [[menu.main]]
 name = 'Blog'
@@ -41,6 +41,11 @@ name = 'Work'
 pageRef = "work"
 url = '/work/'
 weight = 30
+[[menu.main]]
+name = 'Studies'
+pageRef = "studies"
+url = '/studies/'
+weight = 40
 
 [params]
 defaultColor = "dark" # set default color mode: dark or light

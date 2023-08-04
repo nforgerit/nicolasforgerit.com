@@ -1,0 +1,4 @@
+<figure>
+{{ readFile (print (index .Params 0)) | safeHTML }}
+<figcaption>{{ print (index .Params 1) }}</figcaption>
+</figure>
