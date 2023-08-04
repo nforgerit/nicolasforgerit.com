@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certifications on Awesome Hugo blog</title>
+    <link>https://hba.sid.one/certs/</link>
+    <description>Recent content in Certifications on Awesome Hugo blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hba.sid.one/certs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle: Java 17 SE</title>
+      <link>https://hba.sid.one/certs/java17se/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/certs/java17se/</guid>
+      <description>Java SE 17 Course Programming Complete
+1. Introduction to Java Introduction to Java Object Oriented Principles Inheritance Use Access Modifiers Practices for Lesson 1: Overview 2. Primitive Types, Operators, and Flow Control Statements Primitive Types, Operators, and Flow Control Statements Assignment and Arithmetic Operators Binary Number Representation Flow Control Using /switch/ Construct Practices for Lesson 2: Primitive Types, Operators, and Flow Control Statements Practice 2-2: Use the if/else and switch Constructs and the Ternary Operator 3.</description>
+    </item>
+    
+    <item>
+      <title>Coursera: Stanford ML</title>
+      <link>https://hba.sid.one/certs/stanford-ml/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/certs/stanford-ml/</guid>
+      <description>Course 1 Supervised Machine Learning: Regression and Classification
+Week 1: Introduction to ML Supervised Learning Unsupervised Learning Jupyter Notebooks Linear Regression Model Cost function and Visualization Gradient Descent Learning Rate Week 2: Regression with multiple input variables Multiple features Vectorization Gradient descent for multiple linear regression Feature scaling Gradient descent convergence Feature Engineering Polynomial regression Week 3: Classification Logistic Regression Decision boundary Cost function for logistic regression Gradient descent implementation Overfitting Regularized linear and logistic regression Course 2 Advanced Learning Algorithms</description>
+    </item>
+    
+  </channel>
+</rss>

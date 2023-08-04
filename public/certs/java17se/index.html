@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Oracle: Java 17 SE | Awesome Hugo blog</title>
+<meta property="og:title" content="Oracle: Java 17 SE | Awesome Hugo blog" />
+<meta name="twitter:title" content="Oracle: Java 17 SE | Awesome Hugo blog" />
+<meta itemprop="name" content="Oracle: Java 17 SE | Awesome Hugo blog" />
+<meta name="application-name" content="Oracle: Java 17 SE | Awesome Hugo blog" />
+<meta property="og:site_name" content="Awesome hugo blog" />
+
+<meta name="description" content="A brief guide to setup KaTeX">
+<meta itemprop="description" content="A brief guide to setup KaTeX" />
+<meta property="og:description" content="A brief guide to setup KaTeX" />
+<meta name="twitter:description" content="A brief guide to setup KaTeX" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="https://hba.sid.one/2.png" />
+  <meta property="og:image" content="https://hba.sid.one/2.png" />
+  <meta name="twitter:image" content="https://hba.sid.one/2.png" />
+  <meta name="twitter:image:src" content="https://hba.sid.one/2.png" />
+
+
+
+
+  <meta name="generator" content="Hugo 0.111.3">
+
+  
+
+  <link rel="canonical" href="https://hba.sid.one/certs/java17se/"><link href="/sass/main.min.54dfde44246ebd4c02eed154aa7b116a1a7ddec957458f4979ca7fcbad467d39.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+
+  
+    </head><body data-theme = "dark" class="notransition">
+<script src="https://hba.sid.one/js/themeLoader.min.4e9e1a253d543bbfec02e7f2460d9621e719fd739dc8a5256faa91cda6e12e03.js"></script><div class="navbar" role="navigation">
+  <nav class="menu" aria-label="Main Navigation">
+    <a href="/" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+    </a>
+    <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+    <label for="menu-trigger">
+      <span class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+      </span>
+    </label>
+
+    <div class="trigger">
+      <ul class="trigger-container">
+        
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/about/">
+            About
+            </a>
+            
+          </li>
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/blog/">
+            Blog
+            </a>
+            
+          </li>
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/work/">
+            Work
+            </a>
+            
+          </li>
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/studies/">
+            Studies
+            </a>
+            
+          </li>
+        
+        <li class="menu-separator">
+          <span>|</span>
+        </li>
+      </ul>
+      <a id="mode" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Oracle: Java 17 SE</h1>
+                
+                <div class="post-meta">
+                    <time datetime="2023-04-23T00:00:00&#43;00:00" itemprop="datePublished"> Apr 23, 2023 </time>
+                </div>
+            </header>
+            <div class="page-content">
+                <p><a href="https://mylearn.oracle.com/ou/learning-path/java-se-17-developer/99487"><img src="./2.png" alt="Oracle: Java 17 SE"></a></p>
+<h1 id="java-se-17-course">Java SE 17 Course</h1>
+<p>Programming Complete</p>
+<h2 id="1-introduction-to-java">1. Introduction to Java</h2>
+<ul>
+<li>Introduction to Java</li>
+<li><a href="/blog/2023/04/oop-principles-in-java/">Object Oriented Principles</a></li>
+<li>Inheritance</li>
+<li>Use Access Modifiers</li>
+<li>Practices for Lesson 1: Overview</li>
+</ul>
+<h2 id="2-primitive-types-operators-and-flow-control-statements">2. Primitive Types, Operators, and Flow Control Statements</h2>
+<ul>
+<li>Primitive Types, Operators, and Flow Control Statements</li>
+<li>Assignment and Arithmetic Operators</li>
+<li>Binary Number Representation</li>
+<li>Flow Control Using /switch/ Construct</li>
+<li>Practices for Lesson 2: Primitive Types, Operators, and Flow Control Statements</li>
+<li>Practice 2-2: Use the if/else and switch Constructs and the Ternary Operator</li>
+</ul>
+<h2 id="3-text-date-time-and-numeric-objects">3. Text, Date, Time, and Numeric Objects</h2>
+<ul>
+<li>Text, Date, Time, and Numeric Objects</li>
+<li>Text Blocks</li>
+<li>Wrapper Classes for Primitives</li>
+<li>Local Date and Time</li>
+<li>Represent Languages and Countries</li>
+<li>Format and Parse Date and Time Values</li>
+<li>Practice 3-1: Explore String and StringBuilder Objects</li>
+<li>Practice 3-2: Use BigDecimal Class and Format Numeric Values</li>
+<li>Practice 3-3: Use and Format Date and Time Values</li>
+<li>Practice 3-4: Apply Localization and Format Messages</li>
+</ul>
+<h2 id="4-classes-and-objects">4. Classes and Objects</h2>
+<ul>
+<li>Classes and Objects</li>
+<li>Local Variable Type Inference</li>
+<li>IntelliJ IDE Introduction</li>
+<li>Practice 4-1: Create the Product Management Application</li>
+<li>Practice 4-2: Enhance the Product Class</li>
+<li>Practice 4-3: Document Classes</li>
+</ul>
+<h2 id="5-improved-class-design">5. Improved Class Design</h2>
+<ul>
+<li>Improved Class Design</li>
+<li>Access Modifiers Summary</li>
+<li>Enumerations</li>
+<li>Practice 5-3: Make Objects Immutable</li>
+</ul>
+<h2 id="6-implement-inheritance-and-use-records">6. Implement Inheritance and Use Records</h2>
+<ul>
+<li>Implement Inheritance and Use Records</li>
+<li>Verify Object Type Before Casting the Reference</li>
+<li>Override Methods ans Use Polymorphism</li>
+<li>Sealed Classes, Inheritance Under Control</li>
+<li>Factory Method Pattern</li>
+<li>Practice 6-2: Override Methods and Use Polymorphism</li>
+<li>Practice 6-3: Create Factory Methods</li>
+<li>Practice 6-6: Explore Java Records</li>
+<li>Practice 6-7: Implement Sealed Classes with Records</li>
+</ul>
+<h2 id="7-interfaces-and-generics">7. Interfaces and Generics</h2>
+<ul>
+<li>Interfaces and Generics</li>
+<li>Default, Private, and Static Methods in Interfaces</li>
+<li>Generics</li>
+<li>Practice 7-3: Test the Product Review Functionality</li>
+</ul>
+<h2 id="8-arrays-and-loops">8. Arrays and Loops</h2>
+<ul>
+<li>Arrays and Loops</li>
+<li>The Arrays Class</li>
+<li>Practice 8-1: Allow Multiple Reviews for a Product</li>
+</ul>
+<h2 id="9-collections">9. Collections</h2>
+<ul>
+<li>Collections</li>
+<li>Create Set Object</li>
+<li>Create HashMap Object</li>
+<li>Access Collections Concurrently</li>
+<li>Practice 9-1: Organize Products and Reviews into a HashMap</li>
+<li>Practice 9-2: Implement Review Sort and Product Search Features</li>
+</ul>
+<h2 id="10-nested-classes-and-lambda-expressions">10. Nested Classes and Lambda Expressions</h2>
+<ul>
+<li>Nested Classes and Lambda Expressions</li>
+<li>Define Lambda Expression Parameters and Body</li>
+<li>Practice 10-1: Refactor ProductManager to Use a Nested Class</li>
+<li>Practice 10-2: Produce Customized Product Reports</li>
+</ul>
+<h2 id="11-java-streams-api">11. Java Streams API</h2>
+<ul>
+<li>Java Streams API</li>
+<li>Bi-argument Variants of Functional Interfaces</li>
+<li>Aggregate Stream Data using reduce Operation</li>
+<li>Restrictions on Parallel Stream Processing</li>
+<li>Spliterator</li>
+<li>Practice 11-1: Modify ProductManage to Use Streams</li>
+<li>Practice 11-2: Add Discount Per Rating Calculation</li>
+</ul>
+<h2 id="12-exception-handling-logging-and-debugging">12. Exception Handling, Logging, and Debugging</h2>
+<ul>
+<li>Exception Handling, Logging, and Debugging</li>
+<li>Handling Exceptions</li>
+<li>Normal Program Flow with No Exceptions</li>
+<li>Practice 12-1: Use Exception Handling to Fix Logical Errors</li>
+<li>Practice 12-2: Add Text Parsing Operations</li>
+</ul>
+<h2 id="13-java-io-api">13. Java IO API</h2>
+<ul>
+<li>Java IO API</li>
+<li>Serializable Object Graph</li>
+<li>Working with File Systems</li>
+<li>Delete Paths</li>
+<li>Practice 13-1: Print Product Report to a File</li>
+<li>Practice 13-2: Buld-Load Data from Files</li>
+<li>Practice 13-3: Implement Memory Swap Mechanism</li>
+</ul>
+<h2 id="14-java-concurrency-and-multithreading">14. Java Concurrency and Multithreading</h2>
+<ul>
+<li>Java Concurrency and Multithreading</li>
+<li>Manage Executor Service Life Cycle</li>
+<li>Writing Thread-Safe Code</li>
+<li>Summary</li>
+<li>Practice 14-3: Simulate Concurrent Callers</li>
+</ul>
+<h2 id="15-modules-and-deployment">15. Modules and Deployment</h2>
+<ul>
+<li>Modules and Deployment</li>
+<li>JPMS Module Categories</li>
+<li>Open Module Content</li>
+<li>Multi-Release Module Archives</li>
+<li>Practice 15-1: Convert ProductManagement Application into a Module</li>
+<li>Practice 15-2: Separate Application into Several Modules</li>
+</ul>
+<h2 id="16-annotations">16. Annotations</h2>
+<ul>
+<li>Annotations</li>
+<li>Annotations that Validate Design</li>
+</ul>
+<h2 id="17-java-database-connectivity">17. Java Database Connectivity</h2>
+<ul>
+<li>Java Database Connectivity</li>
+<li>Create and Execute Callable SQL Statements</li>
+</ul>
+<h2 id="18-java-security">18. Java Security</h2>
+<ul>
+<li>Java Security</li>
+<li>Execute Privileged Code</li>
+<li>Erroneous Value Guards</li>
+</ul>
+<h2 id="19-advanced-generics">19. Advanced Generics</h2>
+<ul>
+<li>Advanced Generics</li>
+<li>Upper Bound Wildcard</li>
+</ul>
+<h2 id="20-oracle-cloud-deployment">20. Oracle Cloud Deployment</h2>
+<ul>
+<li>Oracle Cloud Deployment</li>
+<li>Example of the Microservices Architecture for an Online Mobile Application</li>
+<li>Practice E-1: Present Application Logic as a Service Using Helidon SE</li>
+</ul>
+<h2 id="21-miscellaneous-java-topics">21. Miscellaneous Java Topics</h2>
+<ul>
+<li>Miscellaneous Java Topics</li>
+<li>Bitwise Logical Operators</li>
+<li>Character Classes</li>
+<li>Using the /replaceAll/ Method</li>
+<li>Stream Examples</li>
+<li>Java IO, File Watch Service</li>
+<li>Factory Design Pattern code demo</li>
+<li>Singleton Pattern code demo</li>
+<li>Bitwise Logical Operators code demo</li>
+<li>Regular Expressions code demo</li>
+<li>Threads deadlock, livelock, and starvation code demos</li>
+<li>Streams code demos</li>
+<li>Java IO, File Watch Service code demos</li>
+</ul>
+<h1 id="exam-topics">Exam Topics</h1>
+<h2 id="handling-date-time-text-numeric-and-boolean-values">Handling date, time, text, numeric and boolean values</h2>
+<ul>
+<li>Use primitives and wrapper classes including Math API, parentheses, type promotion, and casting to evaluate arithmetic and boolean expressions</li>
+<li>Manipulate text, including text blocks, using String and StringBuilder classes</li>
+<li>Manipulate date, time, duration, period, instant and time-zone objects using Date-Time API</li>
+</ul>
+<h2 id="controlling-program-flow">Controlling Program Flow</h2>
+<ul>
+<li>Create program flow control constructs including if/else, switch statements and expressions, loops, and break and continue statements</li>
+</ul>
+<h2 id="utilizing-java-object-oriented-approach">Utilizing Java Object-Oriented Approach</h2>
+<ul>
+<li>Declare and instantiate Java objects including nested class objects, and explain the object life-cycle including creation, reassigning references, and garbage collection</li>
+<li>Create classes and records, and define and use instance and static fields and methods, constructors, and instance and static initializers</li>
+<li>Implement overloading, including var-arg methods</li>
+<li>Understand variable scopes, use local variable type inference, apply encapsulation, and make objects immutable</li>
+<li>Implement inheritance, including abstract and sealed classes. Override methods, including that of Object class. Implement polymorphism and differentiate object type versus reference type. Perform type casting, identify object types using instanceof operator and pattern matching</li>
+<li>Create and use interfaces, identify functional interfaces, and utilize private, static, and default interface methods</li>
+<li>Create and use enumerations with fields, methods and constructors</li>
+</ul>
+<h2 id="handling-exceptions">Handling Exceptions</h2>
+<ul>
+<li>Handle exceptions using try/catch/finally, try-with-resources, and multi-catch blocks, including custom exceptions</li>
+</ul>
+<h2 id="working-with-arrays-and-collections">Working with Arrays and Collections</h2>
+<ul>
+<li>Create Java arrays, List, Set, Map, and Deque collections, and add, remove, update, retrieve and sort their elements</li>
+</ul>
+<h2 id="working-with-streams-and-lambda-expressions">Working with Streams and Lambda expressions</h2>
+<ul>
+<li>Use Java object and primitive Streams, including lambda expressions implementing functional interfaces, to supply, filter, map, consume, and sort data</li>
+<li>Perform decomposition, concatenation and reduction, and grouping and partitioning on sequential and parallel streams</li>
+</ul>
+<h2 id="packaging-and-deploying-java-code-and-use-the-java-platform-module-system">Packaging and deploying Java code and use the Java Platform Module System</h2>
+<ul>
+<li>Define modules and their dependencies, expose module content including for reflection. Define services, producers, and consumers</li>
+<li>Compile Java code, produce modular and non-modular jars, runtime images, and implement migration using unnamed and automatic modules</li>
+</ul>
+<h2 id="managing-concurrent-code-execution">Managing concurrent code execution</h2>
+<ul>
+<li>Create worker threads using Runnable and Callable, manage the thread lifecycle, including automations provided by different Executor services and concurrent API</li>
+<li>Develop thread-safe code, using different locking mechanisms and concurrent API</li>
+<li>Process Java collections concurrently including the use of parallel streams</li>
+</ul>
+<h2 id="using-java-io-api">Using Java I/O API</h2>
+<ul>
+<li>Read and write console and file data using I/O Streams</li>
+<li>Serialize and de-serialize Java objects</li>
+<li>Create, traverse, read, and write Path objects and their properties using java.nio.file API</li>
+</ul>
+<h2 id="accessing-databases-using-jdbc">Accessing databases using JDBC</h2>
+<ul>
+<li>Create connections, create and execute basic, prepared and callable statements, process query results and control transactions using JDBC API</li>
+</ul>
+<h2 id="implementing-localization">Implementing Localization</h2>
+<ul>
+<li>Implement localization using locales, resource bundles, parse and format messages, dates, times, and numbers including currency and percentage values</li>
+</ul>
+<h2 id="assume-the-following">Assume the following:</h2>
+<ul>
+<li>Missing package and import statements: If sample code do not include package or import statements, and the question does not explicitly refer to these missing statements, then assume that all sample code is in the same package, or import statements exist to support them.</li>
+<li>No file or directory path names for classes: If a question does not state the file names or directory locations of classes, then assume one of the following, whichever will enable the code to compile and run:
+<ul>
+<li>All classes are in one file</li>
+<li>Each class is contained in a separate file, and all files are in one directory</li>
+</ul>
+</li>
+<li>Unintended line breaks: Sample code might have unintended line breaks. If you see a line of code that looks like it has wrapped, and this creates a situation where the wrapping is significant (for example, a quoted String literal has wrapped), assume that the wrapping is an extension of the same line, and the line does not contain a hard carriage return that would cause a compilation failure.</li>
+<li>Code fragments: A code fragment is a small section of source code presented without its context. Assume that all necessary supporting code exists and that the supporting environment fully supports the correct compilation and execution of the code shown and its omitted environment.</li>
+<li>Descriptive comments: Take descriptive comments, such as &ldquo;setter and getters go here,&rdquo; at face value. Assume that correct code exists, compiles, and runs successfully to create the described effect.</li>
+</ul>
+<h2 id="candidates-are-also-expected-to">Candidates are also expected to:</h2>
+<ul>
+<li>Understand the basics of Java Logging API.</li>
+<li>Use Annotations such as Override, Functionalnterface, Deprecated, SuppressWarnings, and SafeVarargs.</li>
+<li>Use generics, including wildcards.</li>
+</ul>
+
+            </div>
+
+            
+
+            
+        </article>
+    </main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+    <div class="footer_social-icons">
+<a href="https://github.com/nforgerit" target="_blank" rel="noopener noreferrer me" title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://hejfolks.social/@nfrgrt" target="_blank" rel="noopener noreferrer me" title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/nicolas-forgerit/" target="_blank" rel="noopener noreferrer me" title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me" title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+<a href="mailto:hello@nicolasforgerit.com" target="_blank" rel="noopener noreferrer me" title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a><div>
+    <a href="/about/">About</a>
+    <a href="/certs/">Certifications</a>
+    <a href="https://hej.technology/legals">Legals</a>
+</div></div>
+    <small class="footer_copyright">
+        © 2023 Nicolas Forgerit.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noreferrer noopener">Hugo blog awesome</a>
+        theme on
+        <a href="https://gohugo.io" target="_blank" rel="noreferrer noopener">Hugo</a>.
+    </small>
+</footer>
+<script src="https://hba.sid.one/js/themeSwitchnMenu.min.2a402288242b6930b175a0722c267e2353055739b3975834df35e56d00dd8f50.js"></script></body>
+</html>
